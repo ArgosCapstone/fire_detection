@@ -7,6 +7,9 @@ project(argos_gazebo)
 find_package(ament_cmake_python REQUIRED)
 ament_python_install_package(argos_gazebo)
 
+# Ensure the launch directory exists
+file(MAKE_DIRECTORY share/argos_gazebo/launch)
+
 # Install launch files
 install(DIRECTORY launch/
   DESTINATION share/argos_gazebo/launch
